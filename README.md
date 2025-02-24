@@ -1,8 +1,24 @@
-# React + Vite
+all will be components 
+# evry section will be a component
+# @b-lkbih tasks :
+    -setup react file  structure
+    -clearing file
+    -add the pic we will use 
+    -wright all informations
+    -the color paletts
+    -the font familly
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+    - home --navbar
+    - home --hero 
+    - home --text section
 
-Currently, two official plugins are available:
+    -appartemet page design
+# @5enox tasks:
+    -home catalog section
+    -home grid gallery
+    -home footer
+    -home informations
+    -home locations
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+    -plattes bureau
+
