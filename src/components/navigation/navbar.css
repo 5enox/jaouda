@@ -33,12 +33,9 @@
         margin-right: 10px;
     }
     h1{
-        color: black;
+        color: #9e7d5f;
         margin-bottom: 3px;
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        font-weight: 600;
-        /* -webkit-text-stroke: 1px;
-        -webkit-text-stroke-color: black; */
+        font-weight: 400;
     }
 }
 .contact-btn{

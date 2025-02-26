@@ -1,0 +1,25 @@
+section.textSection{
+    height: auto;
+    width: 100vw;
+    padding: 40px ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.textSectionTitle{
+    font-size: 53px;
+    span{
+        color: #ffc779;
+        font-size: 60px;
+    }
+}
+
+.textSectionparagraph{
+    font-size: 15px;
+    font-family: 'outfit' ,serif;
+    color: #7e7a7c;
+    margin-top: 12px;
+    text-align: center;
+}

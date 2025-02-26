@@ -1,14 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Roboto+Slab:wght@100..900&display=swap');
-
+/* best font for this site */
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Dancing+Script:wght@400..700&family=Roboto+Slab:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Dancing+Script:wght@400..700&family=Outfit:wght@100..900&family=Roboto+Slab:wght@100..900&display=swap');
 * {
     margin: 0;
     padding: 0;
     text-decoration: none;
     box-sizing: border-box;
 
-    font-family: "Roboto Slab", serif;
+    /* font-family: "Roboto Slab", serif; */
     /* font-family: "Dancing Script", serif; */
+    font-family: "Abril Fatface", serif;
 
     font-optical-sizing: auto;
     font-weight:400;
@@ -16,12 +17,21 @@
   }
 
   :root{
-    --brown:#5b4d2e;
+    --brown:#522b2b;
     --beage:#C18C10;
     --lightbeage:#e6c068;
     --yellow:#FBFF00;
     --blue:#cbeef3;
     --black:#171A1C;
-    --white:#f8eada;
+    --white:#fff4e7;
 
+  }
+
+  body{
+    background-color: #fffcf7;
+    color: #000000;
+    height: 100vh;
+    justify-content: center;
+    display: flex;
+    align-items: center;
   }

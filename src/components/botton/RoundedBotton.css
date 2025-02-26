@@ -1,0 +1,13 @@
+.roundedBotton {
+    text-transform:capitalize ;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px;
+    color: white;
+    padding-bottom: 3px;
+
+}
+.roundedbottonparagraph{
+    color: white;
+}

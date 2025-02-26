@@ -1,0 +1,334 @@
+/* map.css */
+
+/* Main map container styling */
+.leaflet-container {
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(23, 26, 28, 0.3);
+    border: 2px solid #5b4d2e;
+    overflow: hidden;
+    transition: all 0.3s ease;
+
+  }
+  
+  .leaflet-container:hover {
+    box-shadow: 0 8px 20px rgba(193, 140, 16, 0.4);
+    transform: translateY(-5px);
+  }
+  
+  /* Custom popup styling */
+  .leaflet-popup-content-wrapper {
+    background-color: #171A1C;
+    color: #cbeef3;
+    border-radius: 8px;
+    padding: 5px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+    border: 1px solid #e6c068;
+  }
+  
+  .leaflet-popup-content {
+    margin: 12px;
+    font-weight: 500;
+  }
+  
+  .leaflet-popup-tip {
+    background-color: #171A1C;
+    border: 1px solid #e6c068;
+  }
+  
+  /* Marker styling and animation */
+  .leaflet-marker-icon {
+    transition: all 0.3s ease;
+    /* Removed the filter to keep the red color intact */
+  }
+  
+  .leaflet-marker-icon:hover {
+    transform: scale(1.2) translateY(-5px);
+    filter: drop-shadow(0 0 5px #FBFF00);
+  }
+  
+  /* Custom marker animation */
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+      opacity: 1;
+    }
+    50% {
+      transform: scale(1.1);
+      opacity: 0.9;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+  
+  .leaflet-marker-icon {
+    animation: pulse 2s infinite;
+  }
+  
+  /* Zoom controls styling */
+  .leaflet-control-zoom {
+    border-radius: 8px !important;
+    overflow: hidden;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2) !important;
+    border: 1px solid #5b4d2e !important;
+  }
+  
+  .leaflet-control-zoom-in, 
+  .leaflet-control-zoom-out {
+    background-color: #171A1C !important;
+    color: #e6c068 !important;
+    transition: all 0.3s ease;
+  }
+  
+  .leaflet-control-zoom-in:hover, 
+  .leaflet-control-zoom-out:hover {
+    background-color: #C18C10 !important;
+    color: #171A1C !important;
+  }
+  
+  /* Attribution control styling */
+  .leaflet-control-attribution {
+    background-color: rgba(23, 26, 28, 0.7) !important;
+    color: #cbeef3 !important;
+    border-top-left-radius: 8px;
+    padding: 3px 8px !important;
+    font-size: 10px !important;
+  }
+  
+  .leaflet-control-attribution a {
+    color: #FBFF00 !important;
+    transition: color 0.3s ease;
+  }
+  
+  .leaflet-control-attribution a:hover {
+    color: #e6c068 !important;
+    text-decoration: none !important;
+  }
+  
+  /* Map tile loading effect */
+  .leaflet-tile {
+    transition: opacity 0.5s ease;
+  }
+  
+  .leaflet-tile-loading {
+    opacity: 0.7;
+  }
+  
+  /* Custom class for marker popup text */
+  .custom-popup .leaflet-popup-content .font-medium {
+    color: #cbeef3;
+    font-size: 14px;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
+  }
+
+
+/* Add these styles to your existing map.css file */
+
+.custom-svg-marker {
+    animation: pulse 2s infinite;
+    filter: drop-shadow(2px 4px 6px rgba(0, 0, 0, 0.5));
+  }
+  
+.custom-svg-marker:hover {
+transform: scale(1.2);
+filter: drop-shadow(2px 4px 10px rgba(251, 255, 0, 0.7));
+}
+
+.custom-popup-content {
+color: #cbeef3;
+font-size: 14px;
+font-weight: 500;
+padding: 5px;
+text-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
+}
+
+@keyframes pulse {
+0% {
+    transform: scale(1);
+    opacity: 1;
+}
+50% {
+    transform: scale(1.1);
+    opacity: 0.9;
+}
+100% {
+    transform: scale(1);
+    opacity: 1;
+}
+}
+
+
+/* Add to your existing map.css file */
+
+/* Container wrapper to control width with margins */
+.map-container-wrapper {
+    width: 60%; /* 100% - 20% on each side = 60% */
+    margin: auto; /* Center the container */
+    position: relative;
+  }
+  
+  /* Keep all your existing map.css styles below */
+  
+  /* Main map container styling */
+  .leaflet-container {
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(23, 26, 28, 0.3);
+    border: 2px solid #5b4d2e;
+    overflow: hidden;
+    transition: all 0.3s ease;
+  }
+  
+  .leaflet-container:hover {
+    box-shadow: 0 8px 20px rgba(193, 140, 16, 0.4);
+    transform: translateY(-5px);
+  }
+  
+  /* Custom popup styling */
+  .leaflet-popup-content-wrapper {
+    background-color: #171A1C;
+    color: #cbeef3;
+    border-radius: 8px;
+    padding: 5px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+    border: 1px solid #e6c068;
+  }
+  
+  .leaflet-popup-content {
+    margin: 12px;
+    font-weight: 500;
+  }
+  
+  .leaflet-popup-tip {
+    background-color: #171A1C;
+    border: 1px solid #e6c068;
+  }
+  
+  /* Marker styling and animation */
+  .leaflet-marker-icon {
+    transition: all 0.3s ease;
+    /* Removed the filter to keep the red color intact */
+  }
+  
+  .leaflet-marker-icon:hover {
+    transform: scale(1.2) translateY(-5px);
+    filter: drop-shadow(0 0 5px #FBFF00);
+  }
+  
+  /* Custom marker animation */
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+      opacity: 1;
+    }
+    50% {
+      transform: scale(1.1);
+      opacity: 0.9;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+  
+  .leaflet-marker-icon {
+    animation: pulse 2s infinite;
+  }
+  
+  /* Zoom controls styling */
+  .leaflet-control-zoom {
+    border-radius: 8px !important;
+    overflow: hidden;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2) !important;
+    border: 1px solid #5b4d2e !important;
+  }
+  
+  .leaflet-control-zoom-in, 
+  .leaflet-control-zoom-out {
+    background-color: #171A1C !important;
+    color: #e6c068 !important;
+    transition: all 0.3s ease;
+  }
+  
+  .leaflet-control-zoom-in:hover, 
+  .leaflet-control-zoom-out:hover {
+    background-color: #C18C10 !important;
+    color: #171A1C !important;
+  }
+  
+  /* Attribution control styling */
+  .leaflet-control-attribution {
+    background-color: rgba(23, 26, 28, 0.7) !important;
+    color: #cbeef3 !important;
+    border-top-left-radius: 8px;
+    padding: 3px 8px !important;
+    font-size: 10px !important;
+  }
+  
+  .leaflet-control-attribution a {
+    color: #FBFF00 !important;
+    transition: color 0.3s ease;
+  }
+  
+  .leaflet-control-attribution a:hover {
+    color: #e6c068 !important;
+    text-decoration: none !important;
+  }
+  
+  /* Map tile loading effect */
+  .leaflet-tile {
+    transition: opacity 0.5s ease;
+  }
+  
+  .leaflet-tile-loading {
+    opacity: 0.7;
+  }
+  
+  /* Custom class for marker popup text */
+  .custom-popup .leaflet-popup-content .font-medium {
+    color: #cbeef3;
+    font-size: 14px;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
+  }
+  
+  /* Add support for responsive design */
+  @media (max-width: 768px) {
+    .map-container-wrapper {
+      width: 80%; /* Slightly wider on smaller screens */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .map-container-wrapper {
+      width: 90%; /* Even wider on mobile devices */
+    }
+  }
+
+
+
+  .google-maps-button-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .google-maps-button {
+    background-color: #171A1C;
+    color: #e6c068;
+    border: 2px solid #5b4d2e;
+    padding: 12px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    text-align: center;
+  }
+  
+  .google-maps-button:hover {
+    background-color: #C18C10;
+    color: #171A1C;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(193, 140, 16, 0.4);
+  }
+  

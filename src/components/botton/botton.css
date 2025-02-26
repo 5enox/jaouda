@@ -1,0 +1,14 @@
+.class-button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* border-radius: 5px; */
+    box-shadow: 5px 5px 0px black;
+    color: white;
+    padding-bottom: 3px;
+    text-transform:capitalize ;
+
+}
+.bottonparagraph{
+    color: white;
+}
