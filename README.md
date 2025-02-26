@@ -1,9 +1,12 @@
-all will be components 
+all will be components
+
 # evry section will be a component
+
 # @b-lkbih tasks :
+
     -setup react file  structure
     -clearing file
-    -add the pic we will use 
+    -add the pic we will use
     -wright all informations
     -the color paletts
             --#e6c068
@@ -18,16 +21,18 @@ all will be components
     -the font familly
 
     - home --navbar
-    - home --hero 
+    - home --hero
     - home --text section
 
     -appartemet page design
+
 # @5enox tasks:
+
     -home catalog section
     -home grid gallery
     -home footer
+    - map component for all section
     -home informations
     -home locations
 
     -plattes bureau
-
