@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Roboto+Slab:wght@100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+
+    font-family: "Roboto Slab", serif;
+    /* font-family: "Dancing Script", serif; */
+
+    font-optical-sizing: auto;
+    font-weight:400;
+    font-style: normal;
+  }
+
+  :root{
+    --brown:#5b4d2e;
+    --beage:#C18C10;
+    --lightbeage:#e6c068;
+    --yellow:#FBFF00;
+    --blue:#cbeef3;
+    --black:#171A1C;
+    --white:#f8eada;
+
+  }
