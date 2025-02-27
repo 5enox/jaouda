@@ -11,7 +11,7 @@ function RoundedBotton({content = 'Click Here',height = '45',width = '120',bgCol
     }
     return (
 
-        <div className="roundedBotton" style={style}><Link to={linkTo}><p className="roundedbottonparagraph">{content}</p></Link></div>
+        <button className="roundedBotton" style={style}><Link to={linkTo}><p className="roundedbottonparagraph">{content}</p></Link></button>
 
     )
 }

@@ -1,0 +1,92 @@
+.luxury-section {
+    background-color: #d7c9b8; /* Beige background */
+    padding: 60px 10%;
+  }
+  
+  /* Introduction Section */
+.intro {
+    text-align: center;
+    margin-bottom: 60px;
+  }
+  
+  .intro h1 {
+    font-size: 2.8rem;
+    font-weight: bold;
+    color: #1a1a1a;
+  }
+  
+  .intro p {
+    font-size: 1.2rem;
+    color: #444;
+    max-width: 800px;
+    margin: 10px auto;
+    line-height: 1.5;
+    font-family: 'outfit', serif;
+  }
+
+  .luxury-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+    gap: 70px;
+  }
+  
+  .luxury-text {
+    flex: 1;
+    max-width: 50%;
+  }
+  
+  .luxury-text h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #1a1a1a;
+    margin-bottom: 20px;
+  }
+  
+  .luxury-text .lux-text-p {
+    font-size: 1.1rem;
+    color: #444;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    font-family: 'outfit', serif;
+  }
+  
+  .luxury-buttons {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .explore-btn {
+    background-color: black;
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: 0.3s;
+  }
+  
+  .explore-btn:hover {
+    background-color: #333;
+  }
+  
+  .learn-btn {
+    background: none;
+    border: none;
+    color: black;
+    font-size: 1rem;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  
+  .luxury-image {
+    flex: 1;
+    max-width: 50%;
+  }
+  
+  .luxury-image img {
+    width: 100%;
+    border-radius: 10px;
+  }
+  

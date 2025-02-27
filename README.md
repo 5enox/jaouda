@@ -22,11 +22,12 @@ all will be components
                 "Roboto Slab", serif;
                 "Dancing Script", serif; 
                 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
-    - home --navbar
-    - home --hero
-    - home --text section
+   D - home --navbar
+   D - home --hero
+   D - home --text section
 
     -appartemet page design
+    - introducing products
 
 # @5enox tasks:
 

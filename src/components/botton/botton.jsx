@@ -9,7 +9,7 @@ function botton({content='Click Here',height='45',width='120',bgColor='#9e7d5f',
         fontSize:fontSize
     }
   return (
-    <div style={style} className='class-button'><Link to={linkeTo}><p className='bottonparagraph'>{content}</p></Link></div>
+    <button style={style} className='class-button'><Link to={linkeTo}><p className='bottonparagraph'>{content}</p></Link></button>
   )
 }
 
