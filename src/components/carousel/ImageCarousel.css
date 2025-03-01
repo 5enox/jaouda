@@ -1,0 +1,56 @@
+.carousel {
+    overflow: hidden;
+    white-space: nowrap;
+    /* position: relative; */
+    padding: 20px 0;
+  }
+  
+  .img-track-left{
+    white-space: nowrap;
+    display: inline-block;
+    
+  }
+  .image-track {
+    display: inline-block;
+    gap: 20px;
+  
+  }
+  
+  .image-track img {
+    /* width: 200px;  */
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+    display: inline-block;
+    margin-left: 20px;
+  }
+  
+  /* Animation for left-moving row */
+  .track-left {
+    animation: moveLeft 10s linear infinite;
+    margin-bottom: 20px;
+  }
+  
+  @keyframes moveLeft {
+    from {
+      transform: translateX(0%);
+    }
+    to {
+      transform: translateX(-50%);
+    }
+  }
+  
+  /* Animation for right-moving row */
+  .track-right {
+    animation: moveRight 10s linear infinite;
+  }
+  
+  @keyframes moveRight {
+    from {
+      transform: translateX(-50%);
+    }
+    to {
+      transform: translateX(0%);
+    }
+  }
+  

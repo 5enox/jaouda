@@ -1,0 +1,119 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+    height: 55px;
+    width: 80%;
+    padding-left: 5px;
+    padding-right: 10px;
+    position: fixed;
+    top: 10px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    border-radius: 50px;
+    box-shadow: 0px 5px 20px rgb(165, 165, 165);
+    border: solid 0.10rem rgb(225, 225, 225);
+    z-index: 999;
+
+
+
+}
+
+.navbar-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+        height: 45px;
+        border-radius: 50%;
+        margin-right: 10px;
+    }
+
+    h1 {
+        color: #9e7d5f;
+        margin-bottom: 3px;
+        font-weight: 400;
+    }
+}
+
+.contact-btn {
+    background-color: #9e7d5f;
+    border-radius: 50px;
+    font-weight: 900;
+    height: 35px;
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 6px 3px;
+
+    p {
+        color: white;
+
+    }
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+}
+
+.drag-down-part {
+    height: 40px;
+    width: 100px;
+    background-color: aqua;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 5px;
+    text-align:center;
+    cursor: pointer;
+}
+
+p.link-word {
+    color: rgb(0, 0, 0);
+}
+
+.product-list {
+    /* position: absolute; */
+    background-color: rgb(235, 245, 255);
+    height: fit-content;
+    width: 250px;
+    top: 20px;
+    right: 30px;
+    padding: 10px;
+    border-radius: 5px;
+    z-index: -98;
+    opacity: 0;
+    display: none;
+    position: absolute;
+
+    .product-link {
+        height: 50px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        padding-left: 20px;
+        border-bottom: solid lightgrey 0.5px;
+    }
+
+    .product-link:hover {
+        background-color: rgb(217, 228, 238);
+    }
+
+}
+
+.when-hover{
+    display: block;
+    opacity: 1;
+    top: 60px;
+    transition: all 200ms linear;
+}
+
