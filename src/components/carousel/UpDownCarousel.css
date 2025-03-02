@@ -1,0 +1,66 @@
+.carousel {
+    overflow: hidden;
+    position: relative;
+    height: 80vh; /* Adjust based on your needs */
+    display: flex;
+    /* flex-direction: column; */
+    align-items: center;
+    white-space: nowrap;
+    gap: 20px;
+}
+
+.img-track {
+    /* display: flex; */
+    display: inline-block;
+
+    /* flex-direction: column; */
+    align-items: center;
+    /* gap: 20px;    */
+}
+
+.img-track-up{
+    white-space: nowrap;
+    display: inline-block;
+}
+.img-track-down{
+    white-space: nowrap; 
+    display:block;
+}
+
+.image-track img {
+    height: 250px;
+    width: 200px;
+    object-fit: cover;
+    /* border-radius: 10px; */
+    display:block;
+    margin-bottom: 20px;
+    
+}
+
+/* Animation for moving up */
+.track-up {
+    animation: moveUp 50s linear infinite;
+}
+
+@keyframes moveUp {
+    from {
+        transform: translateY(0%);
+    }
+    to {
+        transform: translateY(-50%);
+    }
+}
+
+/* Animation for moving down */
+.track-down {
+    animation: moveDown 50s linear infinite;
+}
+
+@keyframes moveDown {
+    from {
+        transform: translateY(-50%);
+    }
+    to {
+        transform: translateY(0%);
+    }
+}

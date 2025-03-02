@@ -1,4 +1,4 @@
-div.product-types{
+.product-types{
 
     display: flex;
     align-items: center;
@@ -7,8 +7,11 @@ div.product-types{
     padding: 60px 0;
 }
 
-h1.products-title{
+.products-title{
     font-size: 2.8rem;
     text-align: center;
-    margin-top: 200px;
+}
+
+.products{
+    background-color: #d6c9b8;
 }

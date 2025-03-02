@@ -24,9 +24,9 @@ header .hero-text{
 }
 header div h2{
     font-weight: 900;
-    font-size: 40px;
+    font-size: 50px;
     text-transform: capitalize;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'abril fatface' , serif;
 }
 header div p{
     font-weight: 400;

@@ -1,12 +1,14 @@
 import "./App.css";
-import Home from "./pages/Home.jsx"
+// import Home from "./pages/Home.jsx"
+import Appartement from "./pages/appartement.jsx";
 
 function App() {
 
 
   return (
     <>
-      <Home/>
+      {/* <Home/> */}
+      <Appartement/>
     </>
   );
 }

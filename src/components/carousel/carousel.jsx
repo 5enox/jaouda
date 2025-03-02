@@ -10,7 +10,7 @@ import img6 from "../../assets/pictures/real pic/WhatsApp Image 2025-02-14 at 23
 const images = [img1, img2, img3, img4, img5, img6];
 
 const ImageCarousel = () => {
-    return (
+    return ( 
         <div className="carousel">
             <div className="img-track-left">
                 {/* First Row - Moves Left */}
