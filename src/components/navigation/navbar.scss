@@ -2,118 +2,188 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: rgb(255, 255, 255);
-    height: 55px;
-    width: 80%;
-    padding-left: 5px;
-    padding-right: 10px;
+    background-color: rgba(255, 255, 255, 0.92);
+    backdrop-filter: blur(8px);
+    height: 50px;
+    width: 75%;
+    padding: 0 25px;
     position: fixed;
-    top: 10px;
-    bottom: 0;
+    top: 15px;
     left: 0;
     right: 0;
     margin: 0 auto;
-    border-radius: 50px;
-    box-shadow: 0px 5px 20px rgb(165, 165, 165);
-    border: solid 0.10rem rgb(225, 225, 225);
+    border-radius: 30px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
     z-index: 999;
-
-
-
-}
-
-.navbar-logo {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    img {
-        height: 45px;
-        border-radius: 50%;
-        margin-right: 10px;
+    transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+    
+    &.navbar-scrolled {
+      width: 82%;
+      height: 45px;
+      padding: 0 20px;
+      background-color: rgba(255, 255, 255, 0.96);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+      top: 10px;
+      
+      .navbar-logo {
+        .logo-container {
+          transform: scale(0.9);
+        }
+        
+        h1 {
+          transform: scale(0.95);
+        }
+      }
     }
-
-    h1 {
+  
+    .navbar-logo {
+      display: flex;
+      align-items: center;
+      
+      .logo-container {
+        width: 38px;
+        height: 38px;
+        border-radius: 10px;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: black;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+        margin-right: 12px;
+        transition: transform 0.3s ease;
+        
+        img {
+          width: 32px;
+          height: 32px;
+          object-fit: contain;
+        }
+      }
+  
+      h1 {
         color: #9e7d5f;
-        margin-bottom: 3px;
-        font-weight: 400;
+        font-weight: 500;
+        font-size: 1.25rem;
+        letter-spacing: 0.3px;
+        margin: 0;
+        transition: transform 0.3s ease;
+      }
     }
-}
-
-.contact-btn {
-    background-color: #9e7d5f;
-    border-radius: 50px;
-    font-weight: 900;
-    height: 35px;
-    width: 100px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0 6px 3px;
-
-    p {
-        color: white;
-
-    }
-}
-
-.nav-links {
-    list-style: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 50px;
-}
-
-.drag-down-part {
-    height: 40px;
-    width: 100px;
-    background-color: aqua;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding-bottom: 5px;
-    text-align:center;
-    cursor: pointer;
-}
-
-p.link-word {
-    color: rgb(0, 0, 0);
-}
-
-.product-list {
-    /* position: absolute; */
-    background-color: rgb(235, 245, 255);
-    height: fit-content;
-    width: 250px;
-    top: 20px;
-    right: 30px;
-    padding: 10px;
-    border-radius: 5px;
-    z-index: -98;
-    opacity: 0;
-    display: none;
-    position: absolute;
-
-    .product-link {
-        height: 50px;
-        width: 100%;
+  
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 25px;
+      
+      .products-dropdown {
+        position: relative;
+        height: 100%;
         display: flex;
         align-items: center;
-        padding-left: 20px;
-        border-bottom: solid lightgrey 0.5px;
+        
+        .nav-item {
+          display: flex;
+          align-items: center;
+          gap: 6px;
+          padding: 6px 12px;
+          border-radius: 20px;
+          font-weight: 500;
+          color: #333;
+          cursor: pointer;
+          transition: all 0.2s ease;
+          font-size: 15px;
+          
+          &:hover {
+            background-color: rgba(158, 125, 95, 0.08);
+            color: #9e7d5f;
+          }
+          
+          .dropdown-icon {
+            transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+            margin-top: 2px;
+            
+            &.active {
+              transform: rotate(-180deg);
+            }
+          }
+        }
+      }
     }
-
-    .product-link:hover {
-        background-color: rgb(217, 228, 238);
+  
+    .product-list {
+      position: absolute;
+      top: 45px;
+      right: -30px;
+      background-color: white;
+      width: 180px;
+      border-radius: 12px;
+      box-shadow: 0 12px 25px rgba(0, 0, 0, 0.1);
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(-8px);
+      transition: all 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
+      overflow: hidden;
+      padding: 6px 0;
+      
+      &-visible {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+      }
+  
+      .product-link {
+        padding: 10px 16px;
+        transition: all 0.15s ease;
+        color: #444;
+        cursor: pointer;
+        font-size: 14px;
+        font-weight: 500;
+        display: flex;
+        align-items: center;
+        
+        .product-dot {
+          width: 6px;
+          height: 6px;
+          border-radius: 50%;
+          background-color: #9e7d5f;
+          margin-right: 10px;
+          opacity: 0;
+          transform: scale(0);
+          transition: all 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+  
+        &:hover {
+          background-color: rgba(158, 125, 95, 0.08);
+          color: #9e7d5f;
+          padding-left: 20px;
+          
+          .product-dot {
+            opacity: 1;
+            transform: scale(1);
+          }
+        }
+      }
     }
-
-}
-
-.when-hover{
-    display: block;
-    opacity: 1;
-    top: 60px;
-    transition: all 200ms linear;
-}
-
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .navbar {
+      width: 90%;
+      padding: 0 15px;
+      
+      .nav-links {
+        gap: 15px;
+      }
+    }
+  }
