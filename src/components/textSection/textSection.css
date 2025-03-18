@@ -6,10 +6,12 @@ section.textSection{
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    text-align: center;
 }
 
 .textSectionTitle{
     font-size: 53px;
+    text-align: center;
     span{
         color: #ffc779;
         font-size: 60px;

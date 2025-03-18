@@ -1,13 +1,14 @@
 import './paragraph.css'
 
-function Paragraph({content ,margin ,width, textAlign}) {
+function Paragraph({content ,margin ,width, padding, textAlign}) {
     const styles = {
         margin : margin,
         width : width,
-        textAlign : textAlign
+        textAlign : textAlign,
+        padding : padding
     }
   return (
-    <p className='Paragraph' style={styles} >{content}</p>
+    <p className='Paragraph' style={styles}>{content}</p>
   )
 }
 

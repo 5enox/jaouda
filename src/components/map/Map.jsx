@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from "react";
-import { MapContainer, TileLayer, Popup, useMap } from "react-leaflet";
+import { useEffect, useState } from "react";
+import { MapContainer, TileLayer, useMap } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
 import "./map.css";
 import L from "leaflet";
@@ -7,7 +7,7 @@ import L from "leaflet";
 // Custom Marker Implementation
 const CustomMarker = ({ position, popupText }) => {
   const map = useMap();
-
+ 
   useEffect(() => {
     const svgIcon = L.divIcon({
       html: `

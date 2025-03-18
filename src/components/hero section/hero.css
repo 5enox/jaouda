@@ -1,6 +1,6 @@
 header {
-    width: 95%;
-    height: 90vh;
+    width: 85%;
+    height: 80vh;
     margin: 40px auto;
     z-index: -100;
     position: relative;
@@ -8,7 +8,7 @@ header {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    border-radius:15px;
+    border-radius:10px;
 }
 
 header .hero-text{
@@ -24,7 +24,7 @@ header .hero-text{
 }
 header div h2{
     font-weight: 900;
-    font-size: 50px;
+    font-size: 40px;
     text-transform: capitalize;
     font-family: 'abril fatface' , serif;
 }

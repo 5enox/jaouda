@@ -1,9 +1,9 @@
 import './title.css'
 
 
-function Title({ content }) {
+function Title({ title }) {
   return (
-    <h1 className="content-title">{content}</h1>
+    <h1 className="content-title">{title}</h1>
   )
 }
 

@@ -1,0 +1,80 @@
+section.location{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 70px;
+    height: 550px;
+}
+ 
+section .region-text{
+    width: 50%;
+}
+section .region-map{
+    width: 50%;
+}
+section .region-text ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    list-style: none;
+    li{
+        /* border:solid 1px red ; */
+        height: 40px;
+        width: 200px;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-bottom: 2px;
+        border: solid rgb(107, 107, 107) 0.5px;
+        border-radius:50px ;
+        /* border-radius: 10px; */
+        a{
+        color: rgb(75, 75, 75);
+        font-family: 'outfit', serif ;
+        font-weight: 400;
+        font-size: large;
+    }}
+}
+
+.apt-child:hover{
+    background-color: rgb(250, 215, 215);
+    border: solid 2px rgb(113, 0, 0);
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    a{
+        color: rgb(63, 0, 0) !important;
+    }
+}
+.br-child:hover{
+    background-color: rgb(215, 229, 250);
+    border: solid 2px rgb(0, 49, 113);
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    a{
+        color: rgb(0, 12, 46) !important;
+    }
+} 
+.cm-child:hover{
+    background-color: rgb(249, 250, 215);
+    border: solid 2px rgb(71, 66, 0);
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    a{
+        color: rgb(60, 55, 0) !important;
+    }
+}
+
+
+
+
+
+
+
+
+
+

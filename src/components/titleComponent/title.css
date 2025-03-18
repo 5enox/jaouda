@@ -1,5 +1,14 @@
 .content-title{
     font-family: 'abril fatface', serif;
     font-size: 60px;
-    padding: 10px;
+    padding: 10px 0;
+    text-transform: capitalize;
+    
+}
+@media (max-width:427px) {
+    .content-title{
+        font-family:'abril fatface', serif;
+        font-size: 30px;
+        
+    }
 }

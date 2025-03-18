@@ -1,4 +1,4 @@
-.carousel {
+.car-ousel {
     overflow: hidden;
     position: relative;
     height: 80vh; /* Adjust based on your needs */
@@ -27,7 +27,7 @@
     display:block;
 }
 
-.image-track img {
+.image-t-rack img {
     height: 250px;
     width: 200px;
     object-fit: cover;

@@ -1,0 +1,143 @@
+.each-product-info {
+    padding: 50px 70px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction:column ;
+}
+
+section.each-product-info .text-div {
+    width: 100%;
+    padding: 20px;
+    border-radius: 5px;
+}
+.orange{
+    background-image: linear-gradient(to right, #fef9ef, #ffead5,#ffb787);  /*#a256ff*/
+}
+.purple{
+    background-image: linear-gradient(to right, #fef9ef, #efd5ff,#bd87ff);  /*#a256ff*/
+}
+.yellow{
+    background-image: linear-gradient(to right, #fef9ef, #fffed5,#fff387);  /*#a256ff*/
+}
+
+
+
+.list-of-info{
+    padding: 10px 50px;
+}
+.list-of-info li{
+    font-family: 'outfit', serif;
+}
+
+
+.tags {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 10px;
+    
+}
+.tags{
+    margin-top: 20px;
+}
+
+li.tag:first-child,
+li.tag:nth-child(2),
+li.tag:nth-child(3),
+li.tag:nth-child(4)
+{
+    border: solid #848484 2px;
+    border-radius: 50px;
+    width: fit-content;
+    display: flex ;
+    align-items: center;
+    justify-content: center;
+    padding: 2px 4px;
+    gap: 5px;
+
+    img{
+        height: 15px;;
+    }
+}
+li.tag:first-child p,
+li.tag:nth-child(2) p,
+li.tag:nth-child(3) p,
+li.tag:nth-child(4) p
+{
+    font-family: 'outfit' , serif;
+    color: #666666;
+    font-size: 10px;
+}
+
+section.each-product-info > div.apt-imgs{
+    height: auto;
+    padding: 25px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+
+}
+
+section.each-product-info > div.apt-imgs >div{width:calc((100% - 60px)/3);min-width: 200px;}
+section.each-product-info > div.apt-imgs >div> img{
+    height: 30vw;
+    width:100%;
+    object-position: center;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+
+
+
+
+@media (max-width:1024px) {
+
+     .each-product-info {
+        height: unset;
+     }
+}
+
+@media (max-width:768px) {
+
+    section.each-product-info > div.apt-imgs >div{
+        width: 45%;
+        img{
+            height: 350px;
+
+        }
+    }
+    .each-product-info {
+        padding: 0 10px;
+    }
+
+
+    section.each-product-info .text-div {
+        width: 100%;
+    }
+    section.each-product-info .apt-imgs {
+        display: none;
+    }
+
+    .list-of-info{
+        padding: 0 20px;
+        list-style:url();
+    }
+
+    section.each-product-info .text-img-in1,
+    section.each-product-info .text-img-in2 {
+        display: block;
+    }
+
+}
+
+
+@media (max-width:426px) {
+    section.each-product-info > div.apt-imgs >div{
+        width: 100%;
+    }
+}
