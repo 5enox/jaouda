@@ -28,7 +28,7 @@ function BuildInformations({ title, content, imgs, backgroundColor }) {
             <div className="apt-imgs">
                 
                     {Object.entries(imgs).map(([key, value], index) => (
-                        <div><img key={index} src={value.src} alt={value.alt} /></div> 
+                        <div key={key}><img key={index} src={value.src} alt={value.alt} /></div> 
                     ))}
             
             </div>

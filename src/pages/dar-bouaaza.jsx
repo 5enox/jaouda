@@ -4,6 +4,9 @@ import BuildInformations from '../components/appartements/build-information.jsx'
 import Navbar from "../components/navigation/navbar"
 import Footer from "../components/footer/index.jsx"
 
+import { useEffect } from 'react'
+import { useLocation } from 'react-router-dom'
+
 function DarBouaaza() {
 
   const dbAptImg = {
@@ -115,6 +118,20 @@ function DarBouaaza() {
   }
 
 
+  //the script to scroll down into a id section
+  const location = useLocation();
+  useEffect(() => {
+    if (location.hash) {
+      setTimeout(() => {
+        const element = document.getElementById(location.hash.substring(1));
+        if (element) {
+          element.scrollIntoView({ behavior: "smooth" });
+        }
+      }, 200); // Small delay to allow React to render before scrolling
+    }
+  }, [location]);
+
+
 
 
   return (
@@ -122,9 +139,9 @@ function DarBouaaza() {
       <Navbar/>
         <AptGreating></AptGreating>
         <RegionInfo title={'dar bouaaza'} content={'Dar Bouaaza offers a variety of modern living and business spaces, including apartments, offices, and commercial spaces. Conveniently located near major shopping centers like MC and Mini Carrefour, these properties provide easy access to essential amenities and services. Whether you are looking for a comfortable apartment, a professional office space, or a commercial location to grow your business, Dar Bouaaza offers an ideal setting with prime accessibility.'} />
-        <BuildInformations id={'apt'} imgs={dbAptImg} title={'appartement'}  content={'Welcome to our Apartments Section! Here, we provide you with all the essential details about our premium apartments, including available spaces, pricing, and prime locations.'}/>
-        <BuildInformations id={'br'} imgs={dbBrImg} title={'offices'} backgroundColor={'purple'}  content={'Welcome to our Offices Section! Here, we provide you with all the essential details about our premium office spaces, featuring modern designs, top-tier amenities, and a prime location in the heart of Dar Bouazza. Prices start at 520,000 DH.'}/>
-        <BuildInformations id={'ec'} imgs={dbEcImg} title={'Espace Commercial'} backgroundColor={'yellow'}  content={'Welcome to our Commercial Spaces Section! Explore our top-tier commercial spaces, designed to meet the needs of growing businesses, with modern architecture, excellent facilities, and a prime location in the heart of Dar Bouazza. Available spaces range from 20m², 22m², 25m², 35m², 47m²,to 100m², all with a cellar and mezzanine.'}/>
+        <BuildInformations  imgs={dbAptImg} title={'appartement'}  content={'Welcome to our Apartments Section! Here, we provide you with all the essential details about our premium apartments, including available spaces, pricing, and prime locations.'}/>
+        <BuildInformations  imgs={dbBrImg} title={'offices'} backgroundColor={'purple'}  content={'Welcome to our Offices Section! Here, we provide you with all the essential details about our premium office spaces, featuring modern designs, top-tier amenities, and a prime location in the heart of Dar Bouazza. Prices start at 520,000 DH.'}/>
+        <BuildInformations id='br'  imgs={dbEcImg} title={'Espace Commercial'} backgroundColor={'yellow'}  content={'Welcome to our Commercial Spaces Section! Explore our top-tier commercial spaces, designed to meet the needs of growing businesses, with modern architecture, excellent facilities, and a prime location in the heart of Dar Bouazza. Available spaces range from 20m², 22m², 25m², 35m², 47m²,to 100m², all with a cellar and mezzanine.'}/>
       <Footer/>
     </div>
   )

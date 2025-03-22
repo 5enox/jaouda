@@ -112,7 +112,7 @@ export default function Footer({ img }) {
                       strokeLinecap="round"
                     />
                   </svg>
-                  123 Avenue Mohammed V, Casablanca
+                  Dar Bouaaza, Casablanca
                 </li>
                 <li>
                   <svg
@@ -129,7 +129,7 @@ export default function Footer({ img }) {
                       strokeLinecap="round"
                     />
                   </svg>
-                  +212 522-123-456
+                  +212 661-986-244
                 </li>
                 <li>
                   <svg
@@ -147,7 +147,7 @@ export default function Footer({ img }) {
                       strokeLinejoin="round"
                     />
                   </svg>
-                  contact@jaouda-immobilier.ma
+                  contact@jaouda-immo.com
                 </li>
               </ul>
             </div>

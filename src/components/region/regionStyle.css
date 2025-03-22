@@ -3,14 +3,16 @@ section.location{
     align-items: center;
     justify-content: center;
     padding: 0 70px;
-    height: 550px;
+    padding-top: 50px;
+    /* height: 550px; */
 }
  
 section .region-text{
     width: 50%;
+    padding-right: 40px;
 }
 section .region-map{
-    width: 50%;
+    width: 50%; 
 }
 section .region-text ul{
     display: flex;

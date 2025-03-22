@@ -31,20 +31,22 @@ const CustomMarker = ({ position, popupText }) => {
     return () => {
       map.removeLayer(marker);
     };
-  }, [map, position, popupText]);
+  }, [position, popupText]);
 
   return null;
 };
 
 const MapComponent = ({
-  coordinates = [51.505, -0.09],
+  coordinates = [33.515034, -7.814081],
   zoom = 13,
   popupText = "Jaouda Location",
 }) => {
   const [position, setPosition] = useState(coordinates);
 
   useEffect(() => {
-    setPosition(coordinates);
+    if (JSON.stringify(position) !== JSON.stringify(coordinates)) {
+      setPosition(coordinates);
+    }
   }, [coordinates]);
 
   const cartoDBUrl =
@@ -55,7 +57,7 @@ const MapComponent = ({
       <MapContainer
         center={position}
         zoom={zoom}
-        style={{ height: "400px", width: "100%" }}
+        style={{ height: "350px", width: "100%" }}
         className="custom-map-container"
       >
         <TileLayer

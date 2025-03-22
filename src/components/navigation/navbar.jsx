@@ -128,7 +128,7 @@ export default function Navbar({ img }) {
           </div>
         </div>
 
-        <RoundedButton content="Contact Us" height="36px" width="120px" />
+        <RoundedButton linkTo="/ContactUs" content="Contact Us" height="36px" width="120px" />
       </div>
     </nav>
   );
