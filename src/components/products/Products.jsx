@@ -1,5 +1,5 @@
 import Card from "../card/Card.jsx"
-import './products.css'
+import './Products.css'
 import aptImg from '../../assets/pictures/unreal pic/Screenshot 2025-02-27 122901.png'
 import officeImg from '../../assets/pictures/unreal pic/Atera Offices - Tel Aviv _ Office Snapshots.jpeg'
 import magazinImg from '../../assets/pictures/unreal pic/magazin.jpeg'
