@@ -1,4 +1,4 @@
-import "./textsection.css"
+import "./textSection.css"
 function textsection() {
   return (
     <section className="textSection">
