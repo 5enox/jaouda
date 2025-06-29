@@ -168,7 +168,7 @@
 
 /* Container wrapper to control width with margins */
 .map-container-wrapper {
-  width: 100%;
+  max-width: 700px;
   /* 100% - 20% on each side = 60% */
   margin: auto;
   /* Center the container */
@@ -304,7 +304,9 @@
 /* Add support for responsive design */
 @media (max-width: 768px) {
   .map-container-wrapper {
-    width: 80%;
+    max-width: 100%;
+    margin: 10px 0;
+
     /* Slightly wider on smaller screens */
   }
 }
@@ -312,6 +314,7 @@
 @media (max-width: 480px) {
   .map-container-wrapper {
     width: 90%;
+    margin: 100px 0;
     /* Even wider on mobile devices */
   }
 }

@@ -1,7 +1,9 @@
 import { useState, useEffect, useRef } from "react";
 import PropTypes from "prop-types";
 import RoundedButton from "../botton/RoundedBotton.jsx";
+import LangSwitcher from "../lang/langSwitcher.jsx"
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 import "./navbar.scss";
 
 export default function Navbar({ img }) {
@@ -9,6 +11,7 @@ export default function Navbar({ img }) {
   const [isScrolled, setIsScrolled] = useState(false);
   const productListRef = useRef(null);
   const productLinkRef = useRef(null);
+  const {t} = useTranslation()
 
   // Close dropdown when clicking outside
   useEffect(() => {
@@ -51,11 +54,11 @@ export default function Navbar({ img }) {
         <div className="navbar-logo">
           <div className="logo-container">
             <img
-              src={img || "src/assets/logos/whitelogo.png"}
+              src={img || "src/assets/logos/logo.png"}
               alt="Jaouda Immobilier Logo"
             />
           </div>
-          <h1>Jaouda Immobilier</h1>
+          <h1>{t('navbar.logo')}</h1>
         </div>
       </Link>
       <div className="nav-links">
@@ -66,7 +69,7 @@ export default function Navbar({ img }) {
           onMouseLeave={() => setShowProductList(false)}
         >
           <span className="nav-item">
-            Products
+            {t('navbar.products')}
             <svg
               className={`dropdown-icon ${showProductList ? "active" : ""}`}
               width="10"
@@ -94,21 +97,21 @@ export default function Navbar({ img }) {
               
               <div className="product-link">
                 <span className="product-dot"></span>
-                Appartements
+                {t('navbar.apartments')}
               </div>
               <div className="region-state">
-                <Link to="/DarBouaaza"><div className="db-region"><span className="product-dot-r"></span> Dar bouaaza</div></Link>
-                <Link to="/SidiRahal"><div className="sr-region">Sidi Rahal</div></Link>
-                <Link to="/HadSoualem"><div className="hs-region">Had Soualem</div></Link>
+                <Link to="/DarBouaaza"><div className="db-region"><span className="product-dot-r"></span> {t('navbar.regions.dar_bouazza')}</div></Link>
+                <Link to="/SidiRahal"><div className="sr-region">{t('navbar.regions.sidi_rahal')}</div></Link>
+                <Link to="/HadSoualem"><div className="hs-region">{t('navbar.regions.had_soualem')}</div></Link>
               </div>
             </div>
             <div className="underline">
               <div className="product-link">
                 <span className="product-dot"></span>
-                Offices
+                {t('navbar.offices')}
               </div>
               <div className="region-state">
-              <Link to="/DarBouaaza"><div className="db-region"><span className="product-dot-r"></span> Dar bouaaza</div></Link>
+              <Link to="/DarBouaaza"><div className="db-region"><span className="product-dot-r"></span> {t('navbar.regions.dar_bouazza')}</div></Link>
               </div>
             </div>
 
@@ -116,23 +119,23 @@ export default function Navbar({ img }) {
 
               <div className="product-link">
                 <span className="product-dot"></span>
-                Magasin
+                {t('navbar.stores')}
               </div>
               <div className="region-state">
-              <Link to="/DarBouaaza"><div className="db-region"><span className="product-dot-r"></span> Dar bouaaza</div></Link>
-                <Link to="/SidiRahal"><div className="sr-region">Sidi Rahal</div></Link>
-                <Link to="/HadSoualem"><div className="hs-region">Had Soualem</div></Link>
+              <Link to="/DarBouaaza"><div className="db-region"> {t('navbar.regions.dar_bouazza')}</div></Link>
+                <Link to="/SidiRahal"><div className="sr-region">{t('navbar.regions.sidi_rahal')}</div></Link>
+                <Link to="/HadSoualem"><div className="hs-region">{t('navbar.regions.had_soualem')}</div></Link>
               </div>
             </div>
 
           </div>
         </div>
-
-        <RoundedButton linkTo="/ContactUs" content="Contact Us" height="36px" width="120px" />
+        <LangSwitcher/>
+        <RoundedButton linkTo="/ContactUs" content={t("navbar.contact_us")} height="36px" width="120px" />
       </div>
     </nav>
   );
-}
+} 
 
 Navbar.propTypes = {
   img: PropTypes.string,

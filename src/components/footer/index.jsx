@@ -1,9 +1,11 @@
 import { useEffect, useState } from "react";
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 import "./index.scss";
 
 export default function Footer({ img }) {
+  const {t} = useTranslation()
   const [isVisible, setIsVisible] = useState(false);
 
   // Show button when page is scrolled down
@@ -36,56 +38,55 @@ export default function Footer({ img }) {
             <div className="footer-logo">
               <div className="logo-container">
                 <img
-                  src={img || "src/assets/logos/whitelogo.png"}
+                  src={img || "src/assets/logos/logo.png"}
                   alt="Jaouda Immobilier Logo"
                 />
-              </div>
-              <h2>Jaouda Immobilier</h2>
+              </div> 
+              <h2>{t('footer.brand.name')}</h2>
             </div>
             <p className="footer-tagline">
-              Votre partenaire de confiance dans l immobilier de luxe depuis
-              2010
+              {t('footer.brand.tagline')}
             </p>
           </div>
 
           <div className="footer-links">
             <div className="footer-section">
-              <h3>Produits</h3>
+              <h3>{t('footer.products.title')}</h3>
               <ul>
                 <li>
-                  <Link to="/DarBouaaza">Appartements</Link>
+                  <Link to="/DarBouaaza">{t('footer.products.links.apartments')}</Link>
                 </li>
                 <li>
-                  <Link to="/DarBouaaza">Offices</Link>
+                  <Link to="/DarBouaaza">{t('footer.products.links.offices')}</Link>
                 </li>
                 <li>
-                  <Link to="/DarBouaaza">Magasins</Link>
+                  <Link to="/DarBouaaza">{t('footer.products.links.stores')}</Link>
                 </li>
 
               </ul>
             </div>
 
             <div className="footer-section">
-              <h3>Entreprise</h3>
+              <h3>{t('footer.company.title')}</h3>
               <ul>
                 <li>
-                  <Link to="/about">À propos</Link>
+                  <Link to="/z">{t('footer.company.links.about')}</Link>
                 </li>
                 <li>
-                  <Link to="/team">Notre équipe</Link>
+                  <Link to="/team">{t("footer.company.links.team")}</Link>
                 </li>
                 <li>
-                  <Link to="/careers">Carrières</Link>
+                  <Link to="/careers">{t("footer.company.links.careers")}</Link>
                 </li>
                 <li>
-                  <Link to="/blog">Blog</Link>
+                  <Link to="/blog">{t("footer.company.links.blog")}</Link>
                 </li>
               </ul>
             </div>
 
             <div className="footer-section">
-              <h3>Contact</h3>
-              <ul className="contact-info">
+              <h3>{t("footer.contact.title")}</h3>
+              <ul className="contact-infos">
                 <li>
                   <svg
                     width="16"
@@ -112,8 +113,7 @@ export default function Footer({ img }) {
                       strokeLinecap="round"
                     />
                   </svg>
-                  Dar Bouaaza, Casablanca
-                </li>
+{t("footer.contact.info.address")}                </li>
                 <li>
                   <svg
                     width="16"
@@ -129,7 +129,7 @@ export default function Footer({ img }) {
                       strokeLinecap="round"
                     />
                   </svg>
-                  +212 661-986-244
+                  {t("footer.contact.info.phone")}
                 </li>
                 <li>
                   <svg
@@ -147,7 +147,7 @@ export default function Footer({ img }) {
                       strokeLinejoin="round"
                     />
                   </svg>
-                  contact@jaouda-immo.com
+                  {t("footer.contact.info.email")}
                 </li>
               </ul>
             </div>
@@ -155,7 +155,7 @@ export default function Footer({ img }) {
         </div>
 
         <div className="footer-social">
-          <h3>Suivez-nous</h3>
+          <h3>{t("footer.followUs")}</h3>
           <div className="social-icons">
             <a
               href="https://facebook.com"
@@ -276,13 +276,12 @@ export default function Footer({ img }) {
         </div>
         <div className="footer-bottom">
           <p>
-            &copy; {new Date().getFullYear()} Jaouda Immobilier. Tous droits
-            réservés.
+          &copy; {new Date().getFullYear()}{t("footer.bottom.rights")}
           </p>
           <div className="footer-legal">
-            <Link to="/privacy">Confidentialité</Link>
-            <Link to="/terms">Conditions</Link>
-            <Link to="/sitemap">Plan du site</Link>
+            <Link to="/privacy">{t("footer.bottom.legal.privacy")}</Link>
+            <Link to="/terms">{t("footer.bottom.legal.terms")}</Link>
+            <Link to="/sitemap">{t("footer.bottom.legal.sitemap")}</Link>
           </div>
         </div>
       </div>

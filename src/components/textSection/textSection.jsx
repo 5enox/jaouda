@@ -1,18 +1,19 @@
-import "./textsection.css"
-function textsection() {
+import "./textSection.css"
+import { useTranslation } from "react-i18next"
+
+function Textsection() {
+  const {t} = useTranslation('translation')
   return (
     <section className="textSection">
       <h1 className="textSectionTitle">
-        Discover Luxury Living in <span>J</span>aouda Immobilier
+      {t("textsection.title")} <span> {t("textsection.letter")}</span>{t("textsection.company") }
       </h1>
       <p className="textSectionparagraph">
-        Welcome to our premier luxury building company, offering a unique and sophisticated collection <br />
-        of high-end apartments, offices, and magazines in the center of Dar Bouaaza, Sidi Rahal and Had Swalem.
+      {t('textsection.paragraph')}
       </p>
     </section>
   )
 }
 
-export default textsection
+export default Textsection
 
-// bg-[#fcf8f5] text-center py-16 px-4

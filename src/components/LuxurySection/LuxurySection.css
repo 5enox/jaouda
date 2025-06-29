@@ -1,6 +1,6 @@
 .luxury-section {
     background-color: #fff1df; /* Beige background  #d7c9b8 */
-    padding: 60px 10%;
+    padding: 60px 70px;
   }
   
   /* Introduction Section */
@@ -11,7 +11,7 @@
   
   .intro h1 {
     font-size: 2.8rem;
-    font-weight: bold;
+    /* font-weight: bold; */
     color: #1a1a1a;
   }
   
@@ -34,15 +34,15 @@
   
   .luxury-text {
     flex: 1;
-    max-width: 50%;
+    width: 50%;
   }
   
   .luxury-text h2 {
     font-size: 2.5rem;
-    font-weight: bold;
+    /* font-weight: bold; */
     color: #1a1a1a;
     margin-bottom: 20px;
-  }
+  } 
   
   .luxury-text .lux-text-p {
     font-size: 1.1rem;
@@ -57,16 +57,7 @@
     gap: 20px;
   }
   
-  .explore-btn {
-    background-color: black;
-    color: white;
-    padding: 12px 24px;
-    border: none;
-    cursor: pointer;
-    font-size: 1rem;
-    font-weight: bold;
-    transition: 0.3s;
-  }
+
   
   .explore-btn:hover {
     background-color: #333;
@@ -96,10 +87,22 @@
   @media (max-width:720px ) {
     .luxury-image{
       flex: none;
-      max-width: 80%;
+      max-width: 100%;
     }
     .luxury-section {
       flex: none;
-      max-width: 80%;
+      max-width: 100%;
+      padding: 60px 10px;
+      margin: 0 10px;
+      border-radius: 7px;
+    }
+    .luxury-text{
+      width: 100%;
+      text-align: center;
+    }
+
+    .luxury-buttons{
+      width: fit-content;
+      margin: auto;
     }
   }

@@ -4,6 +4,7 @@
     align-items: center;
     justify-content: center;
     border-radius: 50px;
+    min-width: 220px;
     color: white;
     /* padding-bottom: 3px; */
 
@@ -11,4 +12,16 @@
 .roundedbottonparagraph{
     color: white;
     font-weight: 100;
+}
+
+@media (max-width:800px) {
+    .roundedBotton{
+        min-width:100px !important;
+    }
+}
+@media (max-width:400px) {
+    .roundedBotton{
+        width: 80px !important;
+        font-size: smaller !important;
+    }
 }

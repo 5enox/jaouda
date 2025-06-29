@@ -3,8 +3,11 @@ import RegionInfo from '../components/region/regionInfo.jsx'
 import BuildInformations from '../components/appartements/build-information.jsx'
 import Navbar from "../components/navigation/navbar"
 import Footer from "../components/footer/index.jsx"
+import Grady from "../components/gradySection/Grady.jsx"
+import { useTranslation } from 'react-i18next'
 
 function SidiRahal() {
+  const {t} = useTranslation()
 
   const srAptImg = {
     img1 :{
@@ -12,11 +15,11 @@ function SidiRahal() {
       alt : 'APPARTEMENT 1'
     },
     img2 :{
-      src : 'src/assets/pictures/real pic/srp/src/WhatsApp Image 2025-02-21 at 12.57.10_d8ee20af.jpg',
+      src : 'src/assets/pictures/real pic/srp/WhatsApp Image 2025-02-21 at 12.57.10_d8ee20af.jpg',
       alt : 'APPARTEMENT 1'
     },
     img3 :{
-      src : 'src/assets/pictures/real pic/srp/src/WhatsApp Image 2025-02-22 at 21.30.25_69f1e690.jpg',
+      src : 'src/assets/pictures/real pic/srp/WhatsApp Image 2025-02-22 at 21.30.25_69f1e690.jpg',
       alt : 'APPARTEMENT 1'
     },
     img4 :{
@@ -24,15 +27,15 @@ function SidiRahal() {
       alt : 'couloir'
     },
     img5 :{
-      src : 'src/assets/pictures/real pic/srp/h3appartemet.jpg',
+      src : 'src/assets/pictures/real pic/h3appartemet.jpg',
       alt : 'escaliers '
     },
     img6 :{
-      src : 'src/assets/pictures/real pic/srp/WhatsApp Image 2025-02-14 at 23.19.26_4e619317.jpg',
+      src : 'src/assets/pictures/real pic/WhatsApp Image 2025-02-14 at 23.19.26_4e619317.jpg',
       alt : 'ascenseur'
     },
     img7 :{
-      src : 'src/assets/pictures/real pic/srp/WhatsApp Image 2025-02-14 at 23.19.26_a71dde3e.jpg',
+      src : 'src/assets/pictures/real pic/WhatsApp Image 2025-02-14 at 23.19.26_a71dde3e.jpg',
       alt : 'ascenseur'
     }
   }
@@ -66,14 +69,24 @@ function SidiRahal() {
 
 
   return (
-    <div>
+    <>
       <Navbar/>
-        <AptGreating></AptGreating>
-        <RegionInfo title ={'sidi rahal chatii'} content={'Sidi Rahal Chatti offers a variety of commercial spaces and apartments. Located just 5 minutes from the beach, it provides easy access to the coastline for relaxation and leisure. This area is perfect for those seeking a place close to the beach, offering great potential for business or personal use. With its prime location near the sea, Sidi Rahal Chatti provides a peaceful yet accessible environment.'} />
-        <BuildInformations imgs={srAptImg} title={'appartement'}  content={'Welcome to our Apartments Section in Sidi Rahal Chatia! Here, we provide you with all the essential details about our premium apartments, featuring modern designs, prime locations just 5 minutes from the beach, and a comfortable living environment. Available spaces range from 50m², 62m², 74m², 78m², 80m², to 90m², with prices starting at 370,000 DH.'}/>
-        <BuildInformations imgs={srEcImg} title={'Espace Commercial'} backgroundColor={'yellow'}  content={'Welcome to our Commercial Spaces Section in Sidi Rahal! Discover our premium commercial spaces, designed for growing businesses, featuring modern architecture, excellent facilities, and a strategic location in the heart of Sidi Rahal, just minutes from the beach.'}/>
+        <Grady bg={"src/assets/gd/Gradient 2.jpeg"} />
+        <RegionInfo 
+        title ={t('sidiRahal.regionInfo.title')} 
+        content={t("sidiRahal.regionInfo.content")} />
+        <BuildInformations 
+        title={t('sidiRahal.apartments.title')}  
+        content={t('sidiRahal.apartments.content')}
+        imgs={srAptImg} 
+        />
+        <BuildInformations 
+        imgs={srEcImg} 
+        backgroundColor={'yellow'}  
+        title={t('sidiRahal.commercialSpaces.title')} 
+        content={t('sidiRahal.commercialSpaces.content')}/>
       <Footer/>
-    </div>
+    </>
   )
 }
 

@@ -3,6 +3,7 @@ import { MapContainer, TileLayer, useMap } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
 import "./map.css";
 import L from "leaflet";
+import { useTranslation } from "react-i18next";
 
 // Custom Marker Implementation
 const CustomMarker = ({ position, popupText }) => {
@@ -42,6 +43,8 @@ const MapComponent = ({
   popupText = "Jaouda Location",
 }) => {
   const [position, setPosition] = useState(coordinates);
+  const {t} = useTranslation()
+
 
   useEffect(() => {
     if (JSON.stringify(position) !== JSON.stringify(coordinates)) {
@@ -74,7 +77,7 @@ const MapComponent = ({
           rel="noopener noreferrer"
           className="google-maps-button"
         >
-          Find us on Google Maps
+          {t("map.botton")}
         </a>
       </div>
     </div>

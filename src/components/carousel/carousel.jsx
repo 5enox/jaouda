@@ -11,7 +11,7 @@ const images = [img1, img2, img3, img4, img5, img6];
 
 const ImageCarousel = () => {
     return ( 
-        <div className="carousel">
+        <div dir="ltr" className="carousel">
             <div className="img-track-left">
                 {/* First Row - Moves Left */}
                 <div className="image-track track-left">

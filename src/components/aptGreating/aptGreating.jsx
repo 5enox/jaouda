@@ -1,6 +1,6 @@
 import './aptGreating.css'
 import UpDownCar from '../carousel/UpDownCarousel.jsx'
-
+import { useState, useEffect } from "react";
 
 function AptGreating() {
   const images_part1 = [
@@ -13,7 +13,7 @@ function AptGreating() {
   ]
   const images_part2 = [
     'src/assets/pictures/real pic/WhatsApp Image 2025-02-14 at 23.19.25_479b33ba.jpg',
-    'src/assets/pictures/real pic/WhatsApp Image 2025-02-14 at 23.19.26_4ac95fef.jpg ',
+    'src/assets/pictures/real pic/WhatsApp Image 2025-02-14 at 23.19.26_4ac95fef.jpg',
     'src/assets/pictures/real pic/WhatsApp Image 2025-02-14 at 23.19.30_6c07887c.jpg',
     'src/assets/pictures/real pic/WhatsApp Image 2025-02-14 at 23.19.30_36ef5313.jpg',
     'src/assets/pictures/real pic/WhatsApp Image 2025-02-14 at 23.19.34_c3e001d9.jpg',
@@ -28,15 +28,30 @@ function AptGreating() {
     'src/assets/pictures/real pic/srp/WhatsApp Image 2025-02-27 at 21.54.20_17b9aa14.jpg',
     'src/assets/pictures/real pic/srp/WhatsApp Image 2025-02-22 at 21.30.25_69f1e690.jpg',
   ]
+
+  const [isSmallScreen, setIsSmallScreen] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsSmallScreen(window.innerWidth < 700);
+    };
+
+    // Set initial state after component mounts
+    handleResize();
+
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   return (
     <>
       <section className='head-car'>
-        <UpDownCar images1={images_part1} images2={images_part2}></UpDownCar>
-        <UpDownCar images1={images_part2} images2={images_part3}></UpDownCar>
-        <UpDownCar images1={images_part3} images2={images_part1}></UpDownCar>
+        <UpDownCar images1={images_part1} images2={images_part2} />
+        {!isSmallScreen && <UpDownCar images1={images_part2} images2={images_part3} />}
+        {!isSmallScreen && <UpDownCar images1={images_part3} images2={images_part1} />}
       </section>
     </>
   )
 }
 
-export default AptGreating
+export default AptGreating;

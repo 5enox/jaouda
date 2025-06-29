@@ -6,6 +6,7 @@ import img4 from "../../assets/pictures/real pic/WhatsApp Image 2025-02-14 at 23
 import img5 from "../../assets/pictures/real pic/WhatsApp Image 2025-02-14 at 23.19.30_36ef5313.jpg";
 import img6 from "../../assets/pictures/real pic/WhatsApp Image 2025-02-14 at 23.19.32_4007d8e5.jpg";
 import PropTypes from "prop-types";
+
 const UpDownCar = ({ images1,images2 }) => {
     const defaultImages = [img1, img2, img3, img4, img5, img6];
     const finalImages1 = Array.isArray(images1) && images1.length ? images1 : defaultImages;

@@ -3,8 +3,12 @@ import RegionInfo from '../components/region/regionInfo.jsx'
 import BuildInformations from '../components/appartements/build-information.jsx'
 import Navbar from "../components/navigation/navbar"
 import Footer from "../components/footer/index.jsx"
+import Grady from '../components/gradySection/Grady.jsx'
+
+import { useTranslation } from 'react-i18next'
 
 function HadSoualem() {
+  const {t} = useTranslation()
 
   const hsAptImg = {
     img1 :{
@@ -12,11 +16,11 @@ function HadSoualem() {
       alt : 'APPARTEMENT 1'
     },
     img2 :{
-      src : 'src/assets/pictures/real pic/srp/src/WhatsApp Image 2025-02-21 at 12.57.10_d8ee20af.jpg',
+      src : 'src/assets/pictures/real pic/srp/WhatsApp Image 2025-02-21 at 12.57.10_d8ee20af.jpg',
       alt : 'APPARTEMENT 1'
     },
     img3 :{
-      src : 'src/assets/pictures/real pic/srp/src/WhatsApp Image 2025-02-22 at 21.30.25_69f1e690.jpg',
+      src : 'src/assets/pictures/real pic/srp/WhatsApp Image 2025-02-22 at 21.30.25_69f1e690.jpg',
       alt : 'escaliers'
     },
     img4 :{
@@ -24,15 +28,15 @@ function HadSoualem() {
       alt : 'appartement 2'
     },
     img5 :{
-      src : 'src/assets/pictures/real pic/srp/h3appartemet.jpg',
+      src : 'src/assets/pictures/real pic/src/h3appartemet.jpg',
       alt : 'appartement 2 '
     },
     img6 :{
-      src : 'src/assets/pictures/real pic/srp/WhatsApp Image 2025-02-14 at 23.19.26_4e619317.jpg',
+      src : 'src/assets/pictures/real pic/src/WhatsApp Image 2025-02-14 at 23.19.26_4e619317.jpg',
       alt : 'ascenseur'
     },
     img7 :{
-      src : 'src/assets/pictures/real pic/srp/WhatsApp Image 2025-02-14 at 23.19.26_a71dde3e.jpg',
+      src : 'src/assets/pictures/real pic/src/WhatsApp Image 2025-02-14 at 23.19.26_a71dde3e.jpg',
       alt : 'ascenseur'
     }
   }
@@ -68,10 +72,19 @@ function HadSoualem() {
   return (
     <div>
       <Navbar/>
-        <AptGreating></AptGreating>
-        <RegionInfo title ={'had soualem'} content={'Jaouda offers a range of apartments and commercial spaces in Had Soualem, a strategic location near Casablanca. This area provides excellent access to the city while offering a quieter, more relaxed environment. Whether you are looking for a space to live or set up a business, Jaouda in Had Soualem presents great opportunities, with easy connectivity to Casablanca and the surrounding areas.'} />
-        <BuildInformations imgs={hsAptImg} title={'appartement'}  content={'Welcome to our Apartments Section in Had Soualem! Discover well-designed 72m² apartments, offering a perfect blend of comfort and modern living. Each apartment includes two bedrooms, a Moroccan-style living room, a European-style lounge, a kitchen, and a bathroom. Ideally located in Had Soualem, these spaces provide both convenience and a high-quality environment.'}/>
-        <BuildInformations imgs={hsEcImg} title={'Espace Commercial'} backgroundColor={'yellow'}  content={'Welcome to our Commercial Spaces Section in Had Soualem! Explore our top-tier commercial spaces, designed to meet the needs of expanding businesses. With modern architecture, outstanding facilities, and a prime location in the heart of Had Soualem, these spaces are perfectly positioned for success.'}/>
+        <Grady bg = {"src/assets/gd/6ff9ea44-5916-4c17-8485-08054da30b8e.jpeg"} />
+        <RegionInfo 
+        title ={t('hadSoualem.regionInfo.title')} 
+        content={t('hadSoualem.regionInfo.content')} />
+        <BuildInformations 
+        imgs={hsAptImg} 
+        title={t('hadSoualem.apartments.title')}  
+        content={t('hadSoualem.apartments.content')}/>
+        <BuildInformations 
+        imgs={hsEcImg} 
+        title={t('hadSoualem.commercialSpaces.title')} 
+        backgroundColor={'yellow'}  
+        content={t('hadSoualem.commercialSpaces.content')}/>
       <Footer/>
     </div>
   )

@@ -6,7 +6,7 @@
   backdrop-filter: blur(8px);
   height: 50px;
   width: 75%;
-  max-width: 75%;
+  
   padding: 0 7px;
   // padding-right: 8px;
   position: fixed;
@@ -21,24 +21,26 @@
   transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
 
   &.navbar-scrolled {
-    width: 82%;
+    width: 90% ;
     height: 45px;
     padding: 0 20px;
     padding-right: 4px;
     background-color: rgba(255, 255, 255, 0.96);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+    backdrop-filter: blur(10px);
     top: 10px;
 
     .navbar-logo {
       .logo-container {
         transform: scale(0.9);
+        border-radius: 50px;
+        overflow: hidden;
       }
-
       h1 {
         transform: scale(0.95);
       }
-    }
   }
+}
 
   .navbar-logo {
     display: flex;
@@ -48,7 +50,7 @@
       width: 45px;
       height: 45px;
       border-radius: 10px;
-      overflow: hidden;
+      overflow: hidden ;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -60,10 +62,11 @@
       img {
         width: 32px;
         height: 32px;
+        border-radius: 50px;
         // object-fit: contain;
       }
     }
-
+ 
     h1 {
       color: #463728;
       font-weight: 500;
@@ -92,7 +95,7 @@
         align-items: center;
         gap: 6px;
         padding: 6px 12px;
-        border-radius: 20px;
+        border-radius: 8px;
         font-weight: 500;
         color: #333;
         cursor: pointer;
@@ -101,7 +104,8 @@
 
         &:hover {
           background-color: rgba(158, 125, 95, 0.08);
-          color: #9e7d5f;
+          color: #5f4a37;
+          border: solid 1px rgba(144, 112, 84, 0.13);
         }
 
         .dropdown-icon {
@@ -249,11 +253,17 @@
 
 @media (max-width: 768px) {
   .navbar {
-    width: 90%;
-    padding: 0 15px;
+    width: calc(100% - 20px) !important;
 
     .nav-links {
       gap: 15px;
     }
+  }
+  .navbar.navbar-scrolled{
+    padding: 0px;
+  }
+
+  .navbar .navbar-logo h1{
+    display: none;
   }
 }

@@ -3,11 +3,14 @@ import RegionInfo from '../components/region/regionInfo.jsx'
 import BuildInformations from '../components/appartements/build-information.jsx'
 import Navbar from "../components/navigation/navbar"
 import Footer from "../components/footer/index.jsx"
+import Grady from '../components/gradySection/Grady.jsx'
 
 import { useEffect } from 'react'
 import { useLocation } from 'react-router-dom'
+import { useTranslation } from 'react-i18next'
 
 function DarBouaaza() {
+  const {t} = useTranslation()
 
   const dbAptImg = {
     img1 :{
@@ -137,11 +140,11 @@ function DarBouaaza() {
   return (
     <div>
       <Navbar/>
-        <AptGreating></AptGreating>
-        <RegionInfo title={'dar bouaaza'} content={'Dar Bouaaza offers a variety of modern living and business spaces, including apartments, offices, and commercial spaces. Conveniently located near major shopping centers like MC and Mini Carrefour, these properties provide easy access to essential amenities and services. Whether you are looking for a comfortable apartment, a professional office space, or a commercial location to grow your business, Dar Bouaaza offers an ideal setting with prime accessibility.'} />
-        <BuildInformations  imgs={dbAptImg} title={'appartement'}  content={'Welcome to our Apartments Section! Here, we provide you with all the essential details about our premium apartments, including available spaces, pricing, and prime locations.'}/>
-        <BuildInformations  imgs={dbBrImg} title={'offices'} backgroundColor={'purple'}  content={'Welcome to our Offices Section! Here, we provide you with all the essential details about our premium office spaces, featuring modern designs, top-tier amenities, and a prime location in the heart of Dar Bouazza. Prices start at 520,000 DH.'}/>
-        <BuildInformations id='br'  imgs={dbEcImg} title={'Espace Commercial'} backgroundColor={'yellow'}  content={'Welcome to our Commercial Spaces Section! Explore our top-tier commercial spaces, designed to meet the needs of growing businesses, with modern architecture, excellent facilities, and a prime location in the heart of Dar Bouazza. Available spaces range from 20m², 22m², 25m², 35m², 47m²,to 100m², all with a cellar and mezzanine.'}/>
+        <Grady bg={"src/assets/gd/bggreenline.jpeg"}/>
+        <RegionInfo title={t("darBouaaza.regionInfo.title")} content={t('darBouaaza.regionInfo.content')} />
+        <BuildInformations  imgs={dbAptImg} title={t('darBouaaza.apartments.title')}  content={t('darBouaaza.apartments.content')}/>
+        <BuildInformations  imgs={dbBrImg} title={t('darBouaaza.offices.title')} backgroundColor={'purple'}  content={t('darBouaaza.offices.content')}/>
+        <BuildInformations id='br'  imgs={dbEcImg} title={t('darBouaaza.commercialSpaces.title')} backgroundColor={'yellow'}  content={t('darBouaaza.commercialSpaces.content')}/>
       <Footer/>
     </div>
   )

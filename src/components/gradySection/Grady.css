@@ -1,0 +1,36 @@
+div.grady{
+    width: calc(100vw - 170px);
+    height: 300px;
+    /* rotate: 90deg; */
+    margin:83px auto 30px;
+    border-radius: 10px;
+    overflow: hidden;  
+    position: relative;  
+}
+
+div.grady img {
+    height: 300px;
+    width: calc(100vw);
+    position:absolute;
+    top: 0;
+    object-fit: fill;
+    margin: auto;
+    z-index: -99;
+
+}
+
+div.grady h1 {
+    color: rgb(233, 233, 233);
+    font-size:90px;
+    margin-left: 40px;
+    display: flex;
+    align-items: center;
+    height: 100%;
+
+}
+
+@media (max-width:768px) {
+    div.grady{
+         width: calc(100vw - 20px);
+    }
+}

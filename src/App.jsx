@@ -9,7 +9,6 @@ import ContactUs from './pages/contactUs.jsx'
 
 function App() {
 
-
   return (
     <Router>
       <ScrollToTop />
