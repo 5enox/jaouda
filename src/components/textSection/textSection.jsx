@@ -5,7 +5,6 @@ function textsection() {
   
   const {t} = useTranslation('translation')
   return (
-    const {t} = useTranslation('translation')
     <section className="textSection">
       <h1 className="textSectionTitle">
       {t("textsection.title")} <span> {t("textsection.letter")}</span>{t("textsection.company") }
