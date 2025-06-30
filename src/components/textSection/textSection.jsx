@@ -2,6 +2,7 @@ import "./textSection.css"
 import { useTranslation } from "react-i18next"
 
 function Textsection() {
+  
   const {t} = useTranslation('translation')
   return (
     <section className="textSection">
@@ -16,5 +17,3 @@ function Textsection() {
 }
 
 export default Textsection
-
-// bg-[#fcf8f5] text-center py-16 px-4
