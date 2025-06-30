@@ -20,13 +20,6 @@ function App() {
         <Route path="/ContactUs" element={<ContactUs />} />
       </Routes>
     </Router>
-
-    // <>
-    //   <NavBar/>
-    //   <Home/>
-    //   <Footer/>
-    // </>
-
   );
 }
 
