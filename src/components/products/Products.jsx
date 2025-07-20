@@ -15,9 +15,9 @@ function Products() {
       <h1 className="products-title">{t("products.title")}</h1>
       <p className="product-p">{t("products.description")}</p>
       <div className="product-types">
-        <Link to={'/DarBouaaza'}><Card src={aptImg} text={t('products.apt')} height={'300px'} width={'350px'} alt={'appartement'} /> </Link>
-        <HashLink to={'/DarBouaaza'}><Card src={officeImg} text={t('products.office')} height={'300px'} width={'350px'} alt={'office'} /></HashLink>
-        <Link to={'/DarBouaaza'}><Card src={magazinImg} text={t("products.ce")} height={'300px'} width={'350px'} alt={'magazin'} /></Link>
+        <Link to={'/DarBouaaza'}><Card src={aptImg} text={t('products.apt')} alt={'appartement'} /> </Link>
+        <HashLink to={'/DarBouaaza'}><Card src={officeImg} text={t('products.office')} alt={'office'} /></HashLink>
+        <Link to={'/DarBouaaza'}><Card src={magazinImg} text={t("products.ce")} alt={'magazin'} /></Link>
       </div>
     </section>
 

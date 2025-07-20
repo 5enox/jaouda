@@ -1,55 +1,70 @@
+body{
+    width: 100%;
+}
 header {
     width: 85%;
     height: 85vh;
     margin: 40px auto;
     z-index: -100;
     position: relative;
-    background-image:url("src/assets/pictures/real pic/WhatsApp Image 2025-02-13 at 15.36.29_c6e81e12.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     border-radius:10px;
+    overflow-x: hidden;
 }
 
 header .hero-text{
-    height:auto;
-    width: 50%;
+    height: 100%;
+    width: 100%;
     background-color: rgba(0, 0, 0, 0);
     border-radius: 10px;
     color: rgb(255, 255, 255);  
     position: absolute; 
-    padding: 10px;
-    bottom: 60px;
-    left: 7%;
+
+    
 }
 header div h2{
     font-weight: 100;
     font-size: 40px;
+    width: 55%;
     text-transform: capitalize;
     font-family: 'abril fatface' , serif;
+    position: absolute;
+    bottom: 10%;
+    left: 10%;
 }
-header div p{
-    font-weight: 100;
-    font-size: 25px;
+
+.heroPicture{
+position: absolute;
+top: 0;
+left: 0;
+z-index: -9999;
+width: auto;
+height: 100%;
+border-radius: 10px;
 }
+
 .gradientbackgraound{
+    position: absolute;
     height: 100%;
     width: 100%;
     background:linear-gradient(45deg,rgba(0, 0, 0, 0.782),rgba(0, 0, 0, 0)) ;border-radius: 15px;
 }
 
 
-
-/* @media (max-width:500px)
+    @media (max-width:500px)
  {
     header{
         width: calc(100% - 20px);
-        margin: 20 10px 0;
+        margin: 90px 10px 0;
+        height: 300px;
     }
     header div h2{
-        font-size: 30px;
+        font-size: 20px;
     }
+
     header .hero-text{
         width: 100%;
     }
-} */
+}

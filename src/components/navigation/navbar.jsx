@@ -5,6 +5,7 @@ import LangSwitcher from "../lang/langSwitcher.jsx"
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import "./navbar.scss";
+import Logo from "../../assets/logos/logo.png";
 
 export default function Navbar({ img }) {
   const [showProductList, setShowProductList] = useState(false);
@@ -54,7 +55,7 @@ export default function Navbar({ img }) {
         <div className="navbar-logo">
           <div className="logo-container">
             <img
-              src={img || "src/assets/logos/logo.png"}
+              src={img || Logo}
               alt="Jaouda Immobilier Logo"
             />
           </div>
