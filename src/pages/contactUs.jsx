@@ -1,4 +1,3 @@
-
 import Navbar from "../components/navigation/navbar"
 import Footer from "../components/footer/index.jsx"
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
@@ -18,7 +17,38 @@ const ContactUs = () => {
   return (<>
     <Navbar/>
     <div className="contact-container">
-      {/* Left Section - Form */}
+      {/* Right Section - Info & Map (shows first on mobile) */}
+      <div className="contact-info">
+        <div className="info-section">
+          <h3>CALL US</h3>
+          <p><a href="tel:+212661986244">+212661986244</a></p>
+          <p><a href="tel:+212660282412">+212660282412</a></p>
+        </div>
+
+        <div className="info-section">
+          <h3>LOCATION</h3>
+          <p>dar bouaaza, route azemmour<br/> Casa Blanca 27223</p>
+        </div>
+
+        <div className="info-section">
+          <h3>OUR TOP SERVICES</h3>
+          <p>Appartements</p>
+          <p>Offices</p>
+          <p>Commercial Spaces</p>
+        </div>
+
+        {/* Map Section */}
+        <MapContainer center={[40.7128, -74.0060]} zoom={12} className="map">
+          <TileLayer
+            url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+          />
+          <Marker position={[40.7128, -74.0060]}>
+            <Popup>Our Location</Popup>
+          </Marker>
+        </MapContainer>
+      </div>
+
+      {/* Left Section - Form (shows second on mobile) */}
       <div className="contact-form">
         <h2>Contact Us</h2>
         <label>Name</label>
@@ -37,37 +67,6 @@ const ContactUs = () => {
         
         <button className="submit-btn">SUBMIT</button>
       </div>
-
-      {/* Right Section - Info & Map */}
-      <div className="contact-info">
-        <div className="info-section">
-          <h3>CALL US</h3>
-          <p>1 (234) 567-891</p>
-          <p>1 (234) 987-654</p>
-        </div>
-
-        <div className="info-section">
-          <h3>LOCATION</h3>
-          <p>121 Rock Street, 21 Avenue,<br />New York, NY 92103-9000</p>
-        </div>
-
-        <div className="info-section">
-          <h3>OUR TOP SERVICES</h3>
-          <p>Local Transfers</p>
-          <p>Airport Transfers</p>
-          <p>Excursions and Tours</p>
-        </div>
-
-        {/* Map Section */}
-        <MapContainer center={[40.7128, -74.0060]} zoom={12} className="map">
-          <TileLayer
-            url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-          />
-          <Marker position={[40.7128, -74.0060]}>
-            <Popup>Our Location</Popup>
-          </Marker>
-        </MapContainer>
-      </div>
     </div>
     <Footer/>
     </>
@@ -75,6 +74,3 @@ const ContactUs = () => {
 };
 
 export default ContactUs;
-
-
-
