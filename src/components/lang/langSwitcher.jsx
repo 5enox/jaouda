@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState , useEffect} from 'react';
 import { useTranslation } from 'react-i18next';
 import { Menu, MenuItem, IconButton } from '@mui/material';
 import LanguageIcon from "@mui/icons-material/Language";
@@ -6,6 +6,30 @@ import LanguageIcon from "@mui/icons-material/Language";
 const LanguageSwitcher = () => {
   const { i18n } = useTranslation();
   const [anchorEl, setAnchorEl] = useState(null);
+  const [isMobile, setIsMobile] = useState(false);
+
+  // Function to check screen size
+  const checkScreenSize = () => {
+    setIsMobile(window.innerWidth < 500);
+  };
+
+  useEffect(() => {
+    // Check initial screen size
+    checkScreenSize();
+    
+    // Add event listener for resize
+    window.addEventListener('resize', checkScreenSize);
+  
+    // Cleanup event listener
+    return () => {
+      window.removeEventListener('resize', checkScreenSize);
+    };
+  }, []);
+
+  // Don't render the component if screen is too small
+  if (isMobile) {
+    return null;
+  }
 
   const handleClick = (event) => {
     setAnchorEl(event.currentTarget);
