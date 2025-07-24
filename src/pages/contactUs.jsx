@@ -1,17 +1,10 @@
 import Navbar from "../components/navigation/navbar"
 import Footer from "../components/footer/index.jsx"
-import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
-import L from "leaflet";
 import "../styles/contact.css"; // Custom styles
 
-// Fix default marker issue in Leaflet with Webpack
-delete L.Icon.Default.prototype._getIconUrl;
-L.Icon.Default.mergeOptions({
-  iconRetinaUrl: ("leaflet/dist/images/marker-icon-2x.png"),
-  iconUrl: ("leaflet/dist/images/marker-icon.png"),
-  shadowUrl: ("leaflet/dist/images/marker-shadow.png"),
-});
+
+
 
 const ContactUs = () => {
   return (<>
@@ -37,15 +30,19 @@ const ContactUs = () => {
           <p>Commercial Spaces</p>
         </div>
 
-        {/* Map Section */}
-        <MapContainer center={[40.7128, -74.0060]} zoom={12} className="map">
-          <TileLayer
-            url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-          />
-          <Marker position={[40.7128, -74.0060]}>
-            <Popup>Our Location</Popup>
-          </Marker>
-        </MapContainer>
+
+<div className="map">
+  <iframe
+    src="https://maps.google.com/maps?q=33.5148841,-7.8138276&output=embed"
+    width="100%"
+    height="250"
+    style={{ border: 0, borderRadius: '10px' }}
+    allowFullScreen=""
+    loading="lazy"
+    referrerPolicy="no-referrer-when-downgrade"
+  ></iframe>
+</div>
+
       </div>
 
       {/* Left Section - Form (shows second on mobile) */}

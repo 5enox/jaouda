@@ -2,7 +2,7 @@ import "./hero.css";
 import MainPic from "../../assets/pictures/real pic/WhatsApp Image 2025-02-13 at 15.36.29_c6e81e12.jpg";
 import { useTranslation } from "react-i18next";
 
-export default function hero() {
+export default function Hero() {
   const {t} = useTranslation()
 
   return (

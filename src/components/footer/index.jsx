@@ -3,9 +3,10 @@ import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import "./index.scss";
+import Logo from "../../assets/logos/logo.png"
 
 export default function Footer({ img }) {
-  const {t} = useTranslation()
+  const { t } = useTranslation()
   const [isVisible, setIsVisible] = useState(false);
 
   // Show button when page is scrolled down
@@ -38,10 +39,10 @@ export default function Footer({ img }) {
             <div className="footer-logo">
               <div className="logo-container">
                 <img
-                  src={img || "src/assets/logos/logo.png"}
+                  src={img || Logo}
                   alt="Jaouda Immobilier Logo"
                 />
-              </div> 
+              </div>
               <h2>{t('footer.brand.name')}</h2>
             </div>
             <p className="footer-tagline">
@@ -113,7 +114,7 @@ export default function Footer({ img }) {
                       strokeLinecap="round"
                     />
                   </svg>
-{t("footer.contact.info.address")}                </li>
+                  {t("footer.contact.info.address")}                </li>
                 <li>
                   <svg
                     width="16"
@@ -158,7 +159,7 @@ export default function Footer({ img }) {
           <h3>{t("footer.followUs")}</h3>
           <div className="social-icons">
             <a
-              href="https://facebook.com"
+              href="https://www.facebook.com/profile.php?id=61559156706759"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Facebook"
@@ -180,7 +181,7 @@ export default function Footer({ img }) {
               </svg>
             </a>
             <a
-              href="https://instagram.com"
+              href="https://www.instagram.com/jaouda_immobilier"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Instagram"
@@ -215,10 +216,10 @@ export default function Footer({ img }) {
               </svg>
             </a>
             <a
-              href="https://linkedin.com"
+              href="https://wa.me/212661986244"
               target="_blank"
               rel="noopener noreferrer"
-              aria-label="LinkedIn"
+              aria-label="WhatsApp"
             >
               <svg
                 width="24"
@@ -228,55 +229,39 @@ export default function Footer({ img }) {
                 xmlns="http://www.w3.org/2000/svg"
               >
                 <path
-                  d="M16 8C17.5913 8 19.1174 8.63214 20.2426 9.75736C21.3679 10.8826 22 12.4087 22 14V21H18V14C18 13.4696 17.7893 12.9609 17.4142 12.5858C17.0391 12.2107 16.5304 12 16 12C15.4696 12 14.9609 12.2107 14.5858 12.5858C14.2107 12.9609 14 13.4696 14 14V21H10V14C10 12.4087 10.6321 10.8826 11.7574 9.75736C12.8826 8.63214 14.4087 8 16 8Z"
-                  stroke="#9e7d5f"
-                  strokeWidth="1.5"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
+                  d="M17.472 14.382C17.15 14.222 15.592 13.459 15.293 13.351C14.994 13.243 14.777 13.189 14.56 13.513C14.343 13.837 13.767 14.541 13.583 14.759C13.399 14.977 13.215 15.004 12.893 14.844C12.571 14.684 11.608 14.346 10.467 13.325C9.581 12.53 8.989 11.554 8.805 11.23C8.621 10.906 8.786 10.733 8.946 10.574C9.09 10.429 9.268 10.197 9.428 10.013C9.588 9.829 9.642 9.696 9.75 9.478C9.858 9.26 9.804 9.076 9.724 8.916C9.644 8.756 8.989 7.194 8.717 6.546C8.452 5.918 8.182 6.001 7.982 5.99C7.794 5.98 7.577 5.978 7.36 5.978C7.143 5.978 6.768 6.058 6.469 6.382C6.17 6.706 5.355 7.469 5.355 9.031C5.355 10.593 6.496 12.1 6.656 12.318C6.816 12.536 8.986 15.84 12.283 17.2C13.09 17.545 13.717 17.754 14.206 17.901C15.014 18.176 15.751 18.139 16.332 18.059C16.985 17.97 18.236 17.282 18.508 16.535C18.78 15.788 18.78 15.149 18.7 15.014C18.62 14.879 18.402 14.799 18.08 14.639L17.472 14.382Z"
+                  fill="#9e7d5f"
                 />
                 <path
-                  d="M6 9H2V21H6V9Z"
-                  stroke="#9e7d5f"
-                  strokeWidth="1.5"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-                <path
-                  d="M4 6C5.10457 6 6 5.10457 6 4C6 2.89543 5.10457 2 4 2C2.89543 2 2 2.89543 2 4C2 5.10457 2.89543 6 4 6Z"
-                  stroke="#9e7d5f"
-                  strokeWidth="1.5"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
+                  d="M12 2C6.477 2 2 6.477 2 12C2 13.89 2.525 15.66 3.438 17.168L2.546 20.2C2.49 20.374 2.498 20.562 2.569 20.731C2.64 20.9 2.769 21.038 2.934 21.118C3.039 21.168 3.153 21.194 3.268 21.194C3.339 21.194 3.41 21.184 3.479 21.163L6.832 20.562C8.34 21.475 10.11 22 12 22C17.523 22 22 17.523 22 12C22 6.477 17.523 2 12 2ZM12 20C10.39 20 8.85 19.58 7.534 18.813L7.222 18.622L4.623 19.377L5.378 16.778L5.187 16.466C4.42 15.15 4 13.61 4 12C4 7.582 7.582 4 12 4C16.418 4 20 7.582 20 12C20 16.418 16.418 20 12 20Z"
+                  fill="#9e7d5f"
                 />
               </svg>
             </a>
             <a
-              href="https://twitter.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Twitter"
-            >
-              <svg
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
+                href="https://tiktok.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="TikTok"
               >
-                <path
-                  d="M23 3C22.0424 3.67548 20.9821 4.19211 19.86 4.53C19.2577 3.83751 18.4573 3.34669 17.567 3.12393C16.6767 2.90116 15.7395 2.9572 14.8821 3.28445C14.0247 3.61171 13.2884 4.1944 12.773 4.95372C12.2575 5.71305 11.9877 6.60234 12 7.51V8.51C10.2426 8.55711 8.50127 8.14652 6.93101 7.31479C5.36074 6.48306 4.01032 5.25719 3 3.77C3 3.77 -1 13 8 17C5.94053 18.398 3.48716 19.0989 1 19C10 24 21 19 21 7.5C20.9991 7.22145 20.9723 6.94359 20.92 6.67C21.9406 5.66349 22.6608 4.39271 23 3V3Z"
-                  stroke="#9e7d5f"
-                  strokeWidth="1.5"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-              </svg>
-            </a>
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"
+                    fill="#9e7d5f"
+                  />
+                </svg>
+              </a>
           </div>
         </div>
         <div className="footer-bottom">
           <p>
-          &copy; {new Date().getFullYear()}{t("footer.bottom.rights")}
+            &copy; {new Date().getFullYear()}{t("footer.bottom.rights")}
           </p>
           <div className="footer-legal">
             <Link to="/privacy">{t("footer.bottom.legal.privacy")}</Link>
